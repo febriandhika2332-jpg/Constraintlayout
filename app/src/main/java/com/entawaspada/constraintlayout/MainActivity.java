@@ -13,15 +13,16 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnToActivity2;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); // Baris ini harus ada di paling atas!
 
-        btnToActivity2 = findViewById(R.id.btnToActivity2);
+        // Inisialisasi tombol
+        Button btnToActivity2 = findViewById(R.id.btnToActivity2);
 
+        // Memberi perintah saat diklik
         btnToActivity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
